@@ -1,0 +1,12 @@
+title Exercise 0.6
+
+note over Browser:
+1. Submit button clicked
+2. New note added to notes array
+3. Notes re-rendered
+4. Javascript code processed to send new note
+to server new_note_spa
+end note
+
+Browser->Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa {content: "ok", date: "2021-10-22T05:05:15.839Z"}
+Server->Browser: HTTP Response 201
