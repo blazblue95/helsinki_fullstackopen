@@ -1,0 +1,36 @@
+title Sequence
+
+Browser->Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+
+note over Server:
+1. Server starts executing js-code
+that requests pushes the new note value 
+into json data in notes, and also create
+a data parameter within the object
+
+2. Redirects browser to notes page
+end note
+
+Server->Browser: HTTP Redirect (Status code 302)
+
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+Server->Browser: HTML -code
+
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Server->Browser: main.css
+
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+Server->Browser: main.js
+
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server->Browser: [{ content: "New Note", date: "2021-10-21" }, ...]
+
+note over Browser:
+browser executes the event handler
+that renders notes to display
+end note
+
+
+
+
+
